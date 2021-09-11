@@ -20,6 +20,11 @@
     <div>
         <a href="/peliculas/editar/<%= pelicula.id %>">
             <button>Editar</button>
+            <form action="/peliculas/borrar/<%= pelicula.id %>" method="post">
+                <button type="submit">
+                    Borrar
+                </button>
+            </form>
         </a>
     </div>
    
