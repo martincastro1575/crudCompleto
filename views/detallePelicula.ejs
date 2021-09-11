@@ -1,0 +1,27 @@
+<%- include('./partials/header') %>
+
+    <h1><%= pelicula.title %></h1>
+    <div>
+        <ul>
+            <li>Duracion: <%= pelicula.length %></li>
+            <li>Premios: <%= pelicula.awards %></li>
+            <li>Valoración: <%= pelicula.rating %></li>
+            <li>Genero: <%= pelicula.genero.name %></li>
+            <li>Fecha Lanzamiento: <%= pelicula.release_date %></li>
+        </ul>
+    </div>
+    <h2>Actores:</h2>
+    <ul>
+        <% for( let index = 0; index < pelicula.actores.length; index++ ) { %>
+            <li><%= pelicula.actores[index].first_name %> <%= pelicula.actores[index].last_name %></li>            
+        <% } %>
+
+    </ul>
+    <div>
+        <a href="/peliculas/editar/<%= pelicula.id %>">
+            <button>Editar</button>
+        </a>
+    </div>
+   
+
+<%- include('./partials/footer') %> 
